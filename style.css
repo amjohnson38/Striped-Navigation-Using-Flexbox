@@ -1,0 +1,84 @@
+.flexcontainer{
+	height: 100vh;
+	display:flex;
+}
+
+ .flexcontainer a {
+	position: relative;
+  flex: 1; /*sets equal widths for all flex items*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: flex .4s; /* animation element*/
+}
+
+.flexcontainer #one{
+	background-image: url("http://res.cloudinary.com/angiemjohnson/image/upload/c_scale,w_1030/v1475748637/photo-1446540830250-e2076f9e6917_zpcs2u.png");
+	 
+}
+.flexcontainer #two{
+	background-image: url("http://res.cloudinary.com/angiemjohnson/image/upload/c_scale,w_1138/v1475766491/photo-1415731958810-238ff2770b33_ywtg8x.png");
+	
+}
+
+.flexcontainer #three{
+	background-image: url("http://res.cloudinary.com/angiemjohnson/image/upload/c_scale,w_1118/v1475766813/photo-1458536175223-555a3a7c557d_ro6lxs.png");
+
+}
+
+.flexcontainer #four{
+	background-image: url("http://res.cloudinary.com/angiemjohnson/image/upload/c_scale,w_1139/v1475745277/photo-1475612100326-277243453c69_dxjj92.jpg");
+	 
+}
+
+.flexcontainer a:hover{
+	flex:3;
+}
+
+.flexcontainer .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: background-color .4s;
+}
+ 
+.flexcontainer a:hover .overlay {
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.title{
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400px;
+	font-size:2em;
+	text-decoration:underline;
+	letter-spacing: 0.50em;
+	text-transform: Uppercase;
+}
+
+.flexcontainer .overlay-inner * {
+  visibility: hidden;
+  opacity: 0;
+  transform-style: preserve-3d;
+}
+ 
+.flexcontainer .overlay h2 {
+  transform: translate3d(0, -60px, 0);
+}
+ 
+.flexcontainer .overlay p {
+  transform: translate3d(0, 60px, 0);
+}
+ 
+.flexcontainer a:hover .overlay-inner * {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: all .3s .3s;
+}
